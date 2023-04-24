@@ -30,6 +30,9 @@ namespace MC_Progreso1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("McID"), 1L, 1);
 
+                    b.Property<int>("McCedula")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("McFechaHoy")
                         .HasColumnType("datetime2");
 
@@ -37,7 +40,9 @@ namespace MC_Progreso1.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("McSegundoNombre")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<bool>("McSoltero")
                         .HasColumnType("bit");

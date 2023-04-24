@@ -14,6 +14,11 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="McID" />
             <div class="form-group">
+                <label asp-for="McCedula" class="control-label"></label>
+                <input asp-for="McCedula" class="form-control" />
+                <span asp-validation-for="McCedula" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="McPromedioGlobal" class="control-label"></label>
                 <input asp-for="McPromedioGlobal" class="form-control" />
                 <span asp-validation-for="McPromedioGlobal" class="text-danger"></span>

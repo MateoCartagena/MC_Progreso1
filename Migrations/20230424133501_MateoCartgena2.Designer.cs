@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MC_Progreso1.Migrations
 {
     [DbContext(typeof(MC_DBBContext))]
-    [Migration("20230424130845_MateoCartagena")]
-    partial class MateoCartagena
+    [Migration("20230424133501_MateoCartgena2")]
+    partial class MateoCartgena2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,6 +32,9 @@ namespace MC_Progreso1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("McID"), 1L, 1);
 
+                    b.Property<int>("McCedula")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("McFechaHoy")
                         .HasColumnType("datetime2");
 
@@ -39,7 +42,9 @@ namespace MC_Progreso1.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("McSegundoNombre")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<bool>("McSoltero")
                         .HasColumnType("bit");

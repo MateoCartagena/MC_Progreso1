@@ -13,6 +13,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.McCedula)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.McPromedioGlobal)
             </th>
             <th>
@@ -30,6 +33,9 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.McCedula)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.McPromedioGlobal)
             </td>

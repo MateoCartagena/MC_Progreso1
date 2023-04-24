@@ -10,8 +10,9 @@ namespace MC_Progreso1.Models
         public int McID { get; set; }
 
 
-        //[Required]
-        // public int McCedula { get; set; }
+        [Required]
+        [StringLength(10)]
+        public int McCedula { get; set; }
 
         [Display(Name = "Cuál es su promedio global?")]
         [Range(5, 10)]

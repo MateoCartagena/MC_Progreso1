@@ -56,7 +56,7 @@ namespace MC_Progreso1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("McID,McPromedioGlobal,McSegundoNombre,McSoltero,McFechaHoy")] MCartagena mCartagena)
+        public async Task<IActionResult> Create([Bind("McID,McCedula,McPromedioGlobal,McSegundoNombre,McSoltero,McFechaHoy")] MCartagena mCartagena)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace MC_Progreso1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("McID,McPromedioGlobal,McSegundoNombre,McSoltero,McFechaHoy")] MCartagena mCartagena)
+        public async Task<IActionResult> Edit(int id, [Bind("McID,McCedula,McPromedioGlobal,McSegundoNombre,McSoltero,McFechaHoy")] MCartagena mCartagena)
         {
             if (id != mCartagena.McID)
             {
