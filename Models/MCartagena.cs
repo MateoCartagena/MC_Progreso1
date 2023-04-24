@@ -20,7 +20,7 @@ namespace MC_Progreso1.Models
 
         [Required]
         [StringLength(10)]
-        [Display(Name = "Cuál es su segund nombre?")]
+        [Display(Name = "Cuál es su segundo nombre?")]
         //ErrorMessage = "Last Name should be minimum 3 characters and a maximum of 50 characters")]
         public string? McSegundoNombre { get; set; }
 
