@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MC_Progreso1.Models.MCartagena>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.McPromedioGlobal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.McSegundoNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.McSoltero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.McFechaHoy)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.McPromedioGlobal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.McSegundoNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.McSoltero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.McFechaHoy)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.McID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.McID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.McID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

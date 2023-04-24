@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MC_Progreso1.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MC_DBBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MC_DBBContext") ?? throw new InvalidOperationException("Connection string 'MC_DBBContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

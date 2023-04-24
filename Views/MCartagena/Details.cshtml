@@ -1,0 +1,42 @@
+﻿@model MC_Progreso1.Models.MCartagena
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MCartagena</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.McPromedioGlobal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.McPromedioGlobal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.McSegundoNombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.McSegundoNombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.McSoltero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.McSoltero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.McFechaHoy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.McFechaHoy)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.McID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
