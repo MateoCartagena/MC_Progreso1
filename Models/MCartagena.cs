@@ -7,7 +7,7 @@ namespace MC_Progreso1.Models
     public class MCartagena
     {
         [Key]
-        public int McID { get; set; }
+        public int ID { get; set; }
 
 
         [Required]
